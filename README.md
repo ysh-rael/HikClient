@@ -1,6 +1,6 @@
 # HikClient - Gerenciador de Leitores Faciais Hikvision
 
-O HikClient é uma aplicação gráfica que busca trazer facilidade e expansão de funcionalidades para o [HikAPI](https://github.com/ysh-rael/HikAPI/). A principal característica da HikClienté  a importação de usuários a partir de uma base de dados gerada nos formato exel.
+O HikClient é uma aplicação gráfica que busca trazer facilidade e expansão de funcionalidades para o [HikAPI](https://github.com/ysh-rael/HikAPI/). A principal característica da HikClient é a importação de usuários a partir de uma base de dados gerada nos formato exel.
 
 ![Demonstração do HikClient](https://github.com/ysh-rael/HikClient/assets/79410863/18ea6130-8dc5-4c14-b9d7-d32ba55ca94b)
 
@@ -73,7 +73,7 @@ git push origin feature/sua-feature
 5. Abra um pull request para este repositório.
 
 Licença
-Este projeto está licenciado sob a Licença MIT.
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
 ## Contato
 Se você tiver alguma dúvida ou sugestão, entre em contato:
