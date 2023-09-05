@@ -2,7 +2,7 @@
 
 O HikClient é uma aplicação gráfica que busca trazer facilidade e expansão de funcionalidades para o [HikAPI](https://github.com/ysh-rael/HikAPI/). A principal característica da HikClienté  a importação de usuários a partir de uma base de dados gerada nos formato exel.
 
-![Demonstração do HikClient](link-para-uma-imagem.gif)
+![Demonstração do HikClient](https://github.com/ysh-rael/HikClient/assets/79410863/18ea6130-8dc5-4c14-b9d7-d32ba55ca94b)
 
 ## Recursos Principais
 
