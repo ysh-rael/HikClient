@@ -67,6 +67,8 @@ namespace HikBRAClient
 
                 // Limpe os itens anteriores, se houver
                 select.Items.Clear();
+                select.Items.Add("SELECIONE");
+
 
                 // Adicione os títulos das colunas ao ComboBox
                 for (int col = 1; col <= colCount; col++)
@@ -93,9 +95,23 @@ namespace HikBRAClient
                 // Configure a propriedade LicenseContext
                 ExcelPackage.LicenseContext = LicenseContext.NonCommercial; // ou LicenseContext.Commercial se você tiver uma licença comercial
 
-                ListarTitulosDasColunas(filePath, SelectId);
-                ListarTitulosDasColunas(filePath, SelectNome);
+                try
+                {
+                    ListarTitulosDasColunas(filePath, SelectId);
+                    ListarTitulosDasColunas(filePath, SelectNome);
 
+                    ListarTitulosDasColunas(filePath, SelectCard);
+                    ListarTitulosDasColunas(filePath, SelectType);
+                    ListarTitulosDasColunas(filePath, SelectTemplete);
+
+                } catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao capturar os campos da base de dados.");
+                    QuantErr++;
+                    LabelQuantErr.Text = QuantErr.ToString();
+                    sugestSolution.Text += "# Verificar arquivo utilizado como Base de dados." + Environment.NewLine;
+                    Console.WriteLine(ex);
+                }
 
 
             }
@@ -145,8 +161,11 @@ namespace HikBRAClient
             try
             {
                 // Get valores campo
-                string TestId = GetValComboBox(SelectId);
-                string TestNome = GetValComboBox(SelectNome);
+                string TestId    = GetValComboBox(SelectId);
+                string TestNome  = GetValComboBox(SelectNome);
+                string TestCard  = GetValComboBox(SelectCard);
+                string TestType  = GetValComboBox(SelectType);
+                string TestTemplete  = GetValComboBox(SelectTemplete);
 
                 // Base de dados
                 string filePath = openFileDialog_escolheArquivo.FileName;
@@ -167,6 +186,8 @@ namespace HikBRAClient
                     {
                         string Id = "";
                         string Nome = "";
+                        string UserType = "normal";
+                        string Templete = "1";
                         foreach (var chaveValor in linha)
                         {
                             try
@@ -176,6 +197,8 @@ namespace HikBRAClient
 
                                 if (Column == TestId) Id = Value.ToString();
                                 if (Column == TestNome) Nome = Value.ToString();
+                                if (Column == UserType) UserType = Value.ToString();
+                                if (Column == TestTemplete) Templete = Value.ToString();
                             }
                             catch (Exception ex)
                             {
@@ -210,6 +233,8 @@ namespace HikBRAClient
 
                             Console.WriteLine($"Erro ao importar User: ID: {Id} | Nome: {Nome}");
                         }
+                        float porcentUserCreated = (CountUser / QuantImport) * 100.0f;
+                        Progress.Value = (int)porcentUserCreated;
                     }
 
 
@@ -245,6 +270,16 @@ namespace HikBRAClient
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LabelQuantErr_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

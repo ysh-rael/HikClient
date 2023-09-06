@@ -72,7 +72,7 @@ namespace HikClient.Utils
                         var cellValue = worksheet.Cells[row, col].Value;
 
                         // Use a coluna como chave e o valor da célula como valor no dicionário
-                        linha[columnHeader] = cellValue;
+                        linha[columnHeader] = cellValue ?? "";
                     }
 
                     dados.Add(linha);

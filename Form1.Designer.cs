@@ -37,24 +37,30 @@
             this.Progress = new System.Windows.Forms.ProgressBar();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Details = new System.Windows.Forms.TabPage();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.LabelQuantErr = new System.Windows.Forms.Label();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.LabelQuantImportErr = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.LabelPorcSuccess = new System.Windows.Forms.Label();
+            this.LabelQuantImportSucess = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tab4 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.sugestSolution = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.UserNotCreated = new System.Windows.Forms.TextBox();
-            this.LabelQuantErr = new System.Windows.Forms.Label();
-            this.LabelQuantImportErr = new System.Windows.Forms.Label();
-            this.LabelQuantImportSucess = new System.Windows.Forms.Label();
-            this.LabelPorcSuccess = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.BoxConsole = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.SelectTemplete = new System.Windows.Forms.ComboBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.SelectType = new System.Windows.Forms.ComboBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.SelectCard = new System.Windows.Forms.ComboBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.SelectNome = new System.Windows.Forms.ComboBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -81,11 +87,15 @@
             this.groupBox9.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Details.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             this.tab4.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -166,15 +176,9 @@
             // Details
             // 
             this.Details.BackColor = System.Drawing.Color.Transparent;
+            this.Details.Controls.Add(this.groupBox14);
+            this.Details.Controls.Add(this.groupBox13);
             this.Details.Controls.Add(this.tab4);
-            this.Details.Controls.Add(this.LabelQuantErr);
-            this.Details.Controls.Add(this.LabelQuantImportErr);
-            this.Details.Controls.Add(this.LabelQuantImportSucess);
-            this.Details.Controls.Add(this.LabelPorcSuccess);
-            this.Details.Controls.Add(this.label4);
-            this.Details.Controls.Add(this.label3);
-            this.Details.Controls.Add(this.label2);
-            this.Details.Controls.Add(this.label1);
             this.Details.Location = new System.Drawing.Point(4, 24);
             this.Details.Name = "Details";
             this.Details.Padding = new System.Windows.Forms.Padding(3);
@@ -182,14 +186,123 @@
             this.Details.TabIndex = 0;
             this.Details.Text = "Detalhes";
             // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.label4);
+            this.groupBox14.Controls.Add(this.LabelQuantErr);
+            this.groupBox14.Location = new System.Drawing.Point(9, 127);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(177, 73);
+            this.groupBox14.TabIndex = 11;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Sistema";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label4.Location = new System.Drawing.Point(6, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 16);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Quant. erros:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // LabelQuantErr
+            // 
+            this.LabelQuantErr.AutoSize = true;
+            this.LabelQuantErr.ForeColor = System.Drawing.Color.Crimson;
+            this.LabelQuantErr.Location = new System.Drawing.Point(94, 17);
+            this.LabelQuantErr.Name = "LabelQuantErr";
+            this.LabelQuantErr.Size = new System.Drawing.Size(14, 16);
+            this.LabelQuantErr.TabIndex = 8;
+            this.LabelQuantErr.Text = "0";
+            this.LabelQuantErr.Click += new System.EventHandler(this.LabelQuantErr_Click);
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.label3);
+            this.groupBox13.Controls.Add(this.LabelQuantImportErr);
+            this.groupBox13.Controls.Add(this.label1);
+            this.groupBox13.Controls.Add(this.LabelPorcSuccess);
+            this.groupBox13.Controls.Add(this.LabelQuantImportSucess);
+            this.groupBox13.Controls.Add(this.label2);
+            this.groupBox13.Location = new System.Drawing.Point(9, 30);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(177, 73);
+            this.groupBox13.TabIndex = 10;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Criação Usuário";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label3.Location = new System.Drawing.Point(6, 49);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 16);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Usuários não criado:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // LabelQuantImportErr
+            // 
+            this.LabelQuantImportErr.AutoSize = true;
+            this.LabelQuantImportErr.ForeColor = System.Drawing.Color.Crimson;
+            this.LabelQuantImportErr.Location = new System.Drawing.Point(143, 49);
+            this.LabelQuantImportErr.Name = "LabelQuantImportErr";
+            this.LabelQuantImportErr.Size = new System.Drawing.Size(14, 16);
+            this.LabelQuantImportErr.TabIndex = 7;
+            this.LabelQuantImportErr.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label1.Location = new System.Drawing.Point(6, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Usuários criado:";
+            // 
+            // LabelPorcSuccess
+            // 
+            this.LabelPorcSuccess.AutoSize = true;
+            this.LabelPorcSuccess.ForeColor = System.Drawing.Color.DarkGreen;
+            this.LabelPorcSuccess.Location = new System.Drawing.Point(124, 17);
+            this.LabelPorcSuccess.Name = "LabelPorcSuccess";
+            this.LabelPorcSuccess.Size = new System.Drawing.Size(40, 16);
+            this.LabelPorcSuccess.TabIndex = 5;
+            this.LabelPorcSuccess.Text = "100%";
+            // 
+            // LabelQuantImportSucess
+            // 
+            this.LabelQuantImportSucess.AutoSize = true;
+            this.LabelQuantImportSucess.ForeColor = System.Drawing.Color.DarkGreen;
+            this.LabelQuantImportSucess.Location = new System.Drawing.Point(124, 33);
+            this.LabelQuantImportSucess.Name = "LabelQuantImportSucess";
+            this.LabelQuantImportSucess.Size = new System.Drawing.Size(14, 16);
+            this.LabelQuantImportSucess.TabIndex = 6;
+            this.LabelQuantImportSucess.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label2.Location = new System.Drawing.Point(6, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(114, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Taxa de sucesso:";
+            // 
             // tab4
             // 
             this.tab4.Controls.Add(this.tabPage1);
             this.tab4.Controls.Add(this.tabPage3);
-            this.tab4.Location = new System.Drawing.Point(226, 6);
+            this.tab4.Location = new System.Drawing.Point(192, 6);
             this.tab4.Name = "tab4";
             this.tab4.SelectedIndex = 0;
-            this.tab4.Size = new System.Drawing.Size(453, 201);
+            this.tab4.Size = new System.Drawing.Size(487, 201);
             this.tab4.TabIndex = 9;
             // 
             // tabPage1
@@ -198,7 +311,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(445, 173);
+            this.tabPage1.Size = new System.Drawing.Size(479, 173);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Sugestão de solução";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -210,7 +323,7 @@
             this.sugestSolution.Name = "sugestSolution";
             this.sugestSolution.ReadOnly = true;
             this.sugestSolution.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.sugestSolution.Size = new System.Drawing.Size(433, 164);
+            this.sugestSolution.Size = new System.Drawing.Size(467, 164);
             this.sugestSolution.TabIndex = 0;
             // 
             // tabPage3
@@ -219,7 +332,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(445, 173);
+            this.tabPage3.Size = new System.Drawing.Size(479, 173);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = "Usuário não criado";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -231,90 +344,8 @@
             this.UserNotCreated.Name = "UserNotCreated";
             this.UserNotCreated.ReadOnly = true;
             this.UserNotCreated.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.UserNotCreated.Size = new System.Drawing.Size(433, 164);
+            this.UserNotCreated.Size = new System.Drawing.Size(467, 164);
             this.UserNotCreated.TabIndex = 1;
-            // 
-            // LabelQuantErr
-            // 
-            this.LabelQuantErr.AutoSize = true;
-            this.LabelQuantErr.ForeColor = System.Drawing.Color.Crimson;
-            this.LabelQuantErr.Location = new System.Drawing.Point(96, 81);
-            this.LabelQuantErr.Name = "LabelQuantErr";
-            this.LabelQuantErr.Size = new System.Drawing.Size(14, 16);
-            this.LabelQuantErr.TabIndex = 8;
-            this.LabelQuantErr.Text = "0";
-            // 
-            // LabelQuantImportErr
-            // 
-            this.LabelQuantImportErr.AutoSize = true;
-            this.LabelQuantImportErr.ForeColor = System.Drawing.Color.Crimson;
-            this.LabelQuantImportErr.Location = new System.Drawing.Point(152, 56);
-            this.LabelQuantImportErr.Name = "LabelQuantImportErr";
-            this.LabelQuantImportErr.Size = new System.Drawing.Size(14, 16);
-            this.LabelQuantImportErr.TabIndex = 7;
-            this.LabelQuantImportErr.Text = "0";
-            // 
-            // LabelQuantImportSucess
-            // 
-            this.LabelQuantImportSucess.AutoSize = true;
-            this.LabelQuantImportSucess.ForeColor = System.Drawing.Color.DarkGreen;
-            this.LabelQuantImportSucess.Location = new System.Drawing.Point(126, 30);
-            this.LabelQuantImportSucess.Name = "LabelQuantImportSucess";
-            this.LabelQuantImportSucess.Size = new System.Drawing.Size(14, 16);
-            this.LabelQuantImportSucess.TabIndex = 6;
-            this.LabelQuantImportSucess.Text = "0";
-            // 
-            // LabelPorcSuccess
-            // 
-            this.LabelPorcSuccess.AutoSize = true;
-            this.LabelPorcSuccess.ForeColor = System.Drawing.Color.DarkGreen;
-            this.LabelPorcSuccess.Location = new System.Drawing.Point(126, 6);
-            this.LabelPorcSuccess.Name = "LabelPorcSuccess";
-            this.LabelPorcSuccess.Size = new System.Drawing.Size(40, 16);
-            this.LabelPorcSuccess.TabIndex = 5;
-            this.LabelPorcSuccess.Text = "100%";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label4.Location = new System.Drawing.Point(8, 81);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 16);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Quant. erros:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label3.Location = new System.Drawing.Point(8, 56);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 16);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Usuários não criados:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label2.Location = new System.Drawing.Point(6, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Taxa de sucesso:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label1.Location = new System.Drawing.Point(8, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Usuários criados:";
             // 
             // tabPage2
             // 
@@ -334,6 +365,7 @@
             this.BoxConsole.Location = new System.Drawing.Point(6, 9);
             this.BoxConsole.Multiline = true;
             this.BoxConsole.Name = "BoxConsole";
+            this.BoxConsole.ReadOnly = true;
             this.BoxConsole.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.BoxConsole.Size = new System.Drawing.Size(676, 198);
             this.BoxConsole.TabIndex = 0;
@@ -341,6 +373,8 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.groupBox12);
+            this.groupBox5.Controls.Add(this.groupBox11);
             this.groupBox5.Controls.Add(this.groupBox8);
             this.groupBox5.Controls.Add(this.groupBox7);
             this.groupBox5.Controls.Add(this.groupBox6);
@@ -352,31 +386,67 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Campos a serem preenchidos";
             // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.SelectTemplete);
+            this.groupBox12.Location = new System.Drawing.Point(593, 20);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(121, 50);
+            this.groupBox12.TabIndex = 6;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Templete";
+            // 
+            // SelectTemplete
+            // 
+            this.SelectTemplete.FormattingEnabled = true;
+            this.SelectTemplete.Location = new System.Drawing.Point(6, 21);
+            this.SelectTemplete.Name = "SelectTemplete";
+            this.SelectTemplete.Size = new System.Drawing.Size(109, 23);
+            this.SelectTemplete.TabIndex = 0;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.SelectType);
+            this.groupBox11.Location = new System.Drawing.Point(449, 20);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(127, 50);
+            this.groupBox11.TabIndex = 5;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Tipo";
+            // 
+            // SelectType
+            // 
+            this.SelectType.FormattingEnabled = true;
+            this.SelectType.Location = new System.Drawing.Point(6, 21);
+            this.SelectType.Name = "SelectType";
+            this.SelectType.Size = new System.Drawing.Size(115, 23);
+            this.SelectType.TabIndex = 0;
+            // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.comboBox4);
-            this.groupBox8.Location = new System.Drawing.Point(498, 20);
+            this.groupBox8.Controls.Add(this.SelectCard);
+            this.groupBox8.Location = new System.Drawing.Point(303, 20);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(208, 50);
+            this.groupBox8.Size = new System.Drawing.Size(127, 50);
             this.groupBox8.TabIndex = 4;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Cartao";
             // 
-            // comboBox4
+            // SelectCard
             // 
-            this.comboBox4.Enabled = false;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(6, 21);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(196, 23);
-            this.comboBox4.TabIndex = 0;
+            this.SelectCard.Enabled = false;
+            this.SelectCard.FormattingEnabled = true;
+            this.SelectCard.Location = new System.Drawing.Point(6, 21);
+            this.SelectCard.Name = "SelectCard";
+            this.SelectCard.Size = new System.Drawing.Size(115, 23);
+            this.SelectCard.TabIndex = 0;
             // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.SelectNome);
-            this.groupBox7.Location = new System.Drawing.Point(248, 20);
+            this.groupBox7.Location = new System.Drawing.Point(156, 20);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(220, 50);
+            this.groupBox7.Size = new System.Drawing.Size(129, 50);
             this.groupBox7.TabIndex = 3;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Nome";
@@ -386,7 +456,7 @@
             this.SelectNome.FormattingEnabled = true;
             this.SelectNome.Location = new System.Drawing.Point(6, 21);
             this.SelectNome.Name = "SelectNome";
-            this.SelectNome.Size = new System.Drawing.Size(208, 23);
+            this.SelectNome.Size = new System.Drawing.Size(117, 23);
             this.SelectNome.TabIndex = 0;
             // 
             // groupBox6
@@ -394,7 +464,7 @@
             this.groupBox6.Controls.Add(this.SelectId);
             this.groupBox6.Location = new System.Drawing.Point(9, 20);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(227, 50);
+            this.groupBox6.Size = new System.Drawing.Size(129, 50);
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "ID";
@@ -404,7 +474,7 @@
             this.SelectId.FormattingEnabled = true;
             this.SelectId.Location = new System.Drawing.Point(6, 21);
             this.SelectId.Name = "SelectId";
-            this.SelectId.Size = new System.Drawing.Size(215, 23);
+            this.SelectId.Size = new System.Drawing.Size(117, 23);
             this.SelectId.TabIndex = 0;
             // 
             // groupBox4
@@ -426,7 +496,7 @@
             this.bttnImport.Name = "bttnImport";
             this.bttnImport.Size = new System.Drawing.Size(74, 28);
             this.bttnImport.TabIndex = 2;
-            this.bttnImport.Text = "Importar";
+            this.bttnImport.Text = "Buscar";
             this.bttnImport.UseVisualStyleBackColor = true;
             this.bttnImport.Click += new System.EventHandler(this.bttnImport_Click);
             // 
@@ -581,6 +651,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(743, 621);
             this.Controls.Add(this.headerMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -591,7 +662,10 @@
             this.groupBox9.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.Details.ResumeLayout(false);
-            this.Details.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
             this.tab4.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -600,6 +674,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBox5.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
@@ -634,7 +710,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog_escolheArquivo;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox SelectCard;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.ComboBox SelectNome;
         private System.Windows.Forms.GroupBox groupBox6;
@@ -664,6 +740,12 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox UserNotCreated;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.ComboBox SelectTemplete;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.ComboBox SelectType;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.GroupBox groupBox14;
     }
 }
 
